@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <link
+    rel="shortcut icon"
+    href="/contact-form/favicon-32x32.png"
+    sizes="32x32"
+    type="image/png"
+  >
+  <title>Frontend Mentor | Contact Form</title>
+  <script type="module" crossorigin src="/contact-form/assets/index-BUaW1vJr.js"></script>
+  <link rel="stylesheet" crossorigin href="/contact-form/assets/index-Bwg7997m.css">
+</head>
+<body>
+  <main id="main-content">
+    <article
+      class="contact-card"
+      aria-labelledby="form-heading"
+    >
+      <h1
+        class="contact-card__title"
+        id="form-heading"
+      >Contact Us
+      </h1>
+
+      <form
+        class="contact-form"
+        aria-describedby="form-instructions"
+        novalidate
+      >
+
+        <p
+          class="visually-hidden"
+          id="form-instructions"
+        >All fields marked with an asterisk (*) are required. Complete the form and submit to send us a message.
+        </p>
+
+        <div class="form-row form-row--2-col">
+          <div class="field-group">
+            <label
+              class="field-group__label"
+              for="first-name"
+            >First name <span
+              class="required-asterisk"
+              aria-hidden="true"
+            >*</span></label>
+            <input
+              class="field-group__input"
+              id="first-name"
+              type="text"
+              name="first-name"
+              autocomplete="given-name"
+              aria-required="true"
+              aria-describedby="first-name-error"
+              required
+            >
+            <p
+              class="field-group__error"
+              id="first-name-error"
+              role="alert"
+              aria-live="polite"
+            >This field is required
+            </p>
+          </div>
+
+          <div class="field-group">
+            <label
+              class="field-group__label"
+              for="last-name"
+            >
+              Last name <span
+              class="required-asterisk"
+              aria-hidden="true"
+            >*</span>
+            </label>
+            <input
+              class="field-group__input"
+              type="text"
+              id="last-name"
+              name="last-name"
+              autocomplete="family-name"
+              aria-required="true"
+              aria-describedby="last-name-error"
+              required
+            >
+            <p
+              class="field-group__error"
+              id="last-name-error"
+              role="alert"
+              aria-live="polite"
+            > This field is required
+            </p>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label
+            class="field-group__label"
+            for="email"
+          >
+            Email Address<span
+            class="required-asterisk"
+            aria-hidden="true"
+          >*</span>
+          </label>
+          <input
+            class="field-group__input"
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            aria-required="true"
+            aria-describedby="email-error"
+            required
+          >
+          <p
+            class="field-group__error"
+            id="email-error"
+            role="alert"
+            aria-live="polite"
+          > Please enter a valid email address
+          </p>
+        </div>
+
+        <fieldset
+          class="field-group field-group--fieldset"
+          aria-describedby="query-type-error"
+        >
+          <legend class="field-group__label">Query Type <span
+            class="required-asterisk"
+            aria-hidden="true"
+          >*</span></legend>
+          <div class="radio-grid">
+            <label
+              class="radio-card"
+            >
+              <input
+                class="radio-card__input visually-hidden"
+                type="radio"
+                name="query-type"
+                value="general-enquiry"
+                aria-required="true"
+                required
+              >
+              <span
+                class="radio-card__custom-radio"
+                aria-hidden="true"
+              ></span>
+              <span class="radio-card__text">General Enquiry</span>
+            </label>
+
+            <label
+              class="radio-card"
+            >
+              <input
+                class="radio-card__input visually-hidden"
+                type="radio"
+                name="query-type"
+                value="support-request"
+                aria-required="true"
+                required
+              >
+              <span
+                class="radio-card__custom-radio"
+                aria-hidden="true"
+              ></span>
+              <span class="radio-card__text">Support Request</span>
+            </label>
+          </div>
+          <p
+            class="field-group__error"
+            id="query-type-error"
+            role="alert"
+            aria-live="polite"
+          >Please select a query type
+          </p>
+        </fieldset>
+
+        <div class="field-group">
+          <label
+            class="field-group__label"
+            for="message"
+          >Message <span
+            class="required-asterisk"
+            aria-hidden="true"
+          >*</span></label>
+          <textarea
+            class="field-group__textarea"
+            id="message"
+            name="message"
+            rows="5"
+            aria-required="true"
+            aria-describedby="message-error"
+            required
+          ></textarea>
+          <p
+            class="field-group__error"
+            id="message-error"
+            role="alert"
+            aria-live="polite"
+          > This field is required
+          </p>
+        </div>
+        <div
+          class="field-group field-group--checkbox"
+          aria-describedby="consent-error"
+        >
+          <label
+            class="checkbox-label"
+            for="consent"
+          >
+            <input
+              class="checkbox-label__input visually-hidden"
+              id="consent"
+              name="consent"
+              type="checkbox"
+              aria-required="true"
+              required
+            >
+            <span
+              class="checkbox-label__custom-check"
+              aria-hidden="true"
+            ></span>
+            <span class="checkbox-label__text">I consent to being contacted by the team <span
+              class="required-asterisk"
+              aria-hidden="true"
+            >*</span></span>
+          </label>
+          <p
+            class="field-group__error"
+            id="consent-error"
+            role="alert"
+            aria-live="polite"
+          >To submit this form, please consent to being contacted
+          </p>
+        </div>
+        <button
+          class="contact-form__submit"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </article>
+    <div class="toast" id="success-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+      <div class="toast__header">
+        <span class="toast__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"><path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"/></svg>
+        </span>
+        <span class="toast__title">Message Sent!</span>
+      </div>
+      <p class="toast__text">Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </main>
+</body>
+</html>
